@@ -8,18 +8,18 @@ class Subscribe extends React.Component {
         super(props);
 
         this.state = {
-            values: getValues(this.props.keys, this.props.subjects)
+            values: getValues(this.props.keys, this.props.observables)
         };
         this.subscribers = [];
     }
 
     componentDidMount() {
-        this.props.keys.forEach(subjectKey => {
-            const subscriber = this.props.subjects[subjectKey].subscribe(value => {
+        this.props.keys.forEach(observableKey => {
+            const subscriber = this.props.observables[observableKey].subscribe(value => {
                 // prevent double rendering when subscriber fires first time
-                if (this.state.values[subjectKey] !== value) {
+                if (this.state.values[observableKey] !== value) {
                     this.setState({
-                        values: {...this.state.values, [subjectKey]: value}
+                        values: {...this.state.values, [observableKey]: value}
                     });
                 }
             });
@@ -40,10 +40,10 @@ class Subscribe extends React.Component {
 
 export const subscribe = (...keys) => WrappedComponent => externalProps => (
     <Context.Consumer>
-        {({subjects}) => (
+        {({observables}) => (
             <Subscribe
                 keys={keys}
-                subjects={subjects}
+                observables={observables}
                 externalProps={externalProps}
                 WrappedComponent={WrappedComponent}
             />

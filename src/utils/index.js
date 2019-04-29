@@ -1,13 +1,13 @@
-export const getValues = (keys, subjects) => {
-    return keys.reduce((accumulator, subjectKey) => {
-        accumulator[subjectKey] = subjects[subjectKey].value;
+export const getValues = (keys, observables) => {
+    return keys.reduce((accumulator, observableKey) => {
+        accumulator[observableKey] = observables[observableKey].value;
         return accumulator;
     }, {});
 };
 
-export const getSubjects = (keys, subjects) => {
-    return keys.reduce((accumulator, subjectKey) => {
-        accumulator[subjectKey] = subjects[subjectKey];
+export const getObservables = (keys, observables) => {
+    return keys.reduce((accumulator, observableKey) => {
+        accumulator[observableKey] = observables[observableKey];
         return accumulator;
     }, {});
 };

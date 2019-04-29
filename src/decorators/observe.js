@@ -1,14 +1,14 @@
 import React from 'react';
 
 import Context from '../context';
-import { getSubjects } from '../utils';
+import { getObservables } from '../utils';
 
-class Provide extends React.Component {
+class Observe extends React.Component {
     constructor(props) {
         super(props);
 
         this.state = {
-            subjects: getSubjects(this.props.keys, this.props.subjects)
+            observables: getObservables(this.props.keys, this.props.observables)
         };
     }
 
@@ -16,18 +16,18 @@ class Provide extends React.Component {
         return (
             <this.props.WrappedComponent
                 {...this.props.externalProps}
-                subjects={this.state.subjects}
+                observables={this.state.observables}
             />
         );
     }
 }
 
-export const provide = (...keys) => WrappedComponent => externalProps => (
+export const observe = (...keys) => WrappedComponent => externalProps => (
     <Context.Consumer>
-        {({subjects}) => (
-            <Provide
+        {({observables}) => (
+            <Observe
                 keys={keys}
-                subjects={subjects}
+                observables={observables}
                 externalProps={externalProps}
                 WrappedComponent={WrappedComponent}
             />

@@ -6,10 +6,10 @@ export class Provider extends React.Component {
     constructor(props) {
         super(props);
 
-        const {children, ...subjects} = props;
+        const {children, ...observables} = props;
 
         this.state = {
-            subjects
+            observables
         };
     }
 
