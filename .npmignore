@@ -1,0 +1,5 @@
+# Exclude folder with examples
+.idea/
+example/
+.travis.yml
+webpack.config.js

@@ -13,9 +13,12 @@
     "type": "git",
     "url": "git+https://github.com/zahorovskyi/react-rxjs-provider.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "react",
+    "rxjs"
+  ],
+  "author": "Alexandr Zahorovskyi <zahorovskiy.a.a@gmail.com> (https://github.com/zahorovskyi)",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/zahorovskyi/react-rxjs-provider/issues"
   },

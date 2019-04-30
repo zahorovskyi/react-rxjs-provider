@@ -24,6 +24,6 @@ const config = {
             '.jsx'
         ]
     }
-}
+};
 
 module.exports = config;
