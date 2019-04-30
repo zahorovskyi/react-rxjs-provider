@@ -4,7 +4,7 @@ import { observe } from 'react-rxjs-provider';
 import { TODOS_KEY } from '../observables/todos';
 
 class AddTodo extends React.Component {
-    addTodo = (event) => {
+    addTodo = event => {
         event.preventDefault();
 
         if (event.target[0].value) {

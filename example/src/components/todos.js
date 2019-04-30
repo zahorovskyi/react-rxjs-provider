@@ -3,7 +3,7 @@ import { subscribe } from 'react-rxjs-provider';
 
 import { TODOS_KEY } from '../observables/todos';
 
-const Todos = (props) => (
+const Todos = props => (
     <ul>
         {props.values[TODOS_KEY].map((todo, key) => <li key={key}>{todo}</li>)}
     </ul>
