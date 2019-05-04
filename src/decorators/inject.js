@@ -3,7 +3,7 @@ import React from 'react';
 import Context from '../context';
 import { getObservables } from '../utils';
 
-class Observe extends React.Component {
+class Inject extends React.Component {
     constructor(props) {
         super(props);
 
@@ -22,10 +22,10 @@ class Observe extends React.Component {
     }
 }
 
-export const observe = (...keys) => WrappedComponent => externalProps => (
+export const inject = (...keys) => WrappedComponent => externalProps => (
     <Context.Consumer>
         {({observables}) => (
-            <Observe
+            <Inject
                 keys={keys}
                 observables={observables}
                 externalProps={externalProps}

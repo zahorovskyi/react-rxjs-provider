@@ -1,14 +1,14 @@
 import React from 'react';
-import { observe } from 'react-rxjs-provider';
+import { inject } from 'react-rxjs-provider';
 
-import { TODOS_KEY } from '../observables/todos';
+import { TODOS_OBSERVABLE_KEY } from '../observables/todos';
 
 class AddTodo extends React.Component {
     addTodo = event => {
         event.preventDefault();
 
         if (event.target[0].value) {
-            const todos$ = this.props.observables[TODOS_KEY];
+            const todos$ = this.props.observables[TODOS_OBSERVABLE_KEY];
 
             todos$.next([
                 ...todos$.value,
@@ -29,4 +29,4 @@ class AddTodo extends React.Component {
     }
 }
 
-export default observe(TODOS_KEY)(AddTodo);
+export default inject(TODOS_OBSERVABLE_KEY)(AddTodo);

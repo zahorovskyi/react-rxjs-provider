@@ -1,2 +1,2 @@
 export { subscribe } from './subscribe';
-export { observe } from './observe';
+export { inject } from './inject';
