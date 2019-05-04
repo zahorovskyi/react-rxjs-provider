@@ -10,9 +10,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import { Provider } from 'react-rxjs-provider';
-import * as observables from '../observables';
+import { todos$, TODOS_OBSERVABLE_KEY } from '../observables/todos';
 
 import App from './App';
+
+const observables = {
+    [TODOS_OBSERVABLE_KEY]: todos$
+};
 
 ReactDOM.render(
   <Provider {...observables}>
