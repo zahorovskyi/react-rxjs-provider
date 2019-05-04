@@ -1,11 +1,11 @@
 {
   "name": "react-rxjs-provider",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "",
   "main": "./dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "clean": "rm dist/bundle.js",
+    "clean": "rm dist/index.js",
     "build-dev": "webpack -d --mode development",
     "build-prod": "webpack -p --mode production"
   },
