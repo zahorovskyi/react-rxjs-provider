@@ -1,5 +1,7 @@
 # react-rxjs-provider
 
+[![NPM](https://nodei.co/npm/react-rxjs-provider.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/react-rxjs-provider/)
+
 #### Examples:
 [Example based on create-react-app](https://github.com/zahorovskyi/react-rxjs-provider/tree/master/example)
 
